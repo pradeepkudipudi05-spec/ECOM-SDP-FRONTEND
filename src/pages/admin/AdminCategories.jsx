@@ -49,7 +49,7 @@ const AdminCategories = () => {
         ));
         alert('Category updated successfully!');
       } else {
-        const response = await apiClient.post('/categories', formData);
+        const response = await apiClient.post('/categories/', formData);
         setCategories([...categories, response.data]);
         alert('Category created successfully!');
       }
